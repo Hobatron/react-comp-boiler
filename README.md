@@ -1,4 +1,4 @@
-#React-comp-boiler
+# React-comp-boiler
 **DOES NOT SUPPORT FILE NAV**
 Basic componant generater.
 
