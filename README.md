@@ -4,10 +4,11 @@ Basic componant generater.
 
 ## Usage
 
-`git clone git@github.com:Hobatron/react-comp-boiler.git`
-`cd react-comp-boiler`
-`npm i -g`
-While in src:
+1. `git clone git@github.com:Hobatron/react-comp-boiler.git`
+2. `cd react-comp-boiler`
+3. `npm i -g`
+### While in src:
+
 `new-comp (YourComp) [-d (destination).js]`
 
 ## Requirments
