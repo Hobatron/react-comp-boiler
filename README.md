@@ -11,7 +11,7 @@ Basic componant generater.
 
 `new-comp (YourComp) [-d (destination).js]`
 
-## Requirments
+## Requirements
 
 File structure:
 ```tree
