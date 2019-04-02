@@ -1,0 +1,18 @@
+{
+  "name": "hbrtn-react-comp-boiler",
+  "version": "1.0.0",
+  "description": "Creates a boilerplate component with your componants name, and saves it to any file destination default App.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mason Ashlock",
+  "license": "MIT",
+  "dependencies": {
+    "make-dir": "^3.0.0",
+    "minimist": "^1.2.0"
+  },
+  "bin": {
+    "new-comp": "./index.js"
+  }
+}
