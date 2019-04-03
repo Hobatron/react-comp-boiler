@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
+const fs =require('fs');
 const files = require('./lib/files');
 const argv = require('minimist')(process.argv.slice(2));
-const makeDir = require('make-dir');
 
 if (argv._ != '') {
     if (Object.keys(argv)[1]) {
@@ -26,7 +26,7 @@ function startCreating(newComponent, destination) {
             res.forEach((e) => {
                 if (e == newComponent + '.js') {
                     console.log('Component already exists');
-                    console.log('Prosess aborted, no changes made');
+                    console.log('Process aborted, no changes made');
                     process.exit('1');
                 };
             });
@@ -37,20 +37,23 @@ function startCreating(newComponent, destination) {
             files.addComponent(destination, newComponent);
         });
     } else {
-        (async () => {
-            const path = await makeDir('components');
-            console.log('No /componants/ found, created:');
-            console.log('\t' + path);
-        })();
-        files.makeComponent(newComponent, '/components/', () => {
+        dir = '/components';
+        if (files.directoryExists('src') && !files.directoryExists(process.cwd() + '/src/components')) {
+            dir = '/src/' + dir;
+        };
+        fs.mkdir(process.cwd() + dir, { recursive: true }, (err) => {
+            console.log('made it to this one');            
+            if (err) throw err;
+          });
 
+        files.makeComponent(newComponent, '/components/', (err) => {
+            console.log(err);
             if (destination) {
                 files.addComponent(destination, newComponent);
             };
-
         });
     };
-}
+};
 
 function invalidFormating() {
     console.log('\nInvalid usage. Try:\n');
