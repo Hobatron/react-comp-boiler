@@ -15,9 +15,9 @@ Basic componant generater.
 
 File structure:
 ```tree
-src
-├──App.js
-├──(destination).js
-├──components
-|   ├──YourComponents
+├──src
+| ├──App.js
+| ├──(destination).js
+| ├──components
+|  ├──YourComponents
 ```
