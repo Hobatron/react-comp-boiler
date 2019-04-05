@@ -19,5 +19,5 @@ File structure:
 | ├──App.js
 | ├──(destination).js
 | ├──components
-|  ├──YourComponents
+|   ├──YourComponents
 ```
