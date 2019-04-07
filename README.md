@@ -7,7 +7,7 @@ Basic componant generater.
 1. `git clone git@github.com:Hobatron/react-comp-boiler.git`
 2. `cd react-comp-boiler`
 3. `npm i -g`
-### While in src:
+### While in src OR src is in cwd:
 
 `new-comp (YourComp) [-d (destination).js]`
 
